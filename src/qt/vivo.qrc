@@ -175,7 +175,6 @@
     <qresource prefix="/css">
         <file alias="drkblue">res/css/drkblue.css</file>
         <file alias="light">res/css/light.css</file>
-        <file alias="light-hires">res/css/light-hires.css</file>
     </qresource>
     <qresource prefix="/images/drkblue">
         <file alias="about">res/images/drkblue/about.png</file>
