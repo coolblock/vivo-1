@@ -148,7 +148,7 @@ script: |
   cd $OUTDIR
   rename 's/-setup\.exe$/-setup-unsigned.exe/' *-setup.exe
   find . -name "*-setup-unsigned.exe" | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ${OUTDIR}/${DISTNAME}-win-unsigned.tar.gz
-  mv ${OUTDIR}/${DISTNAME}-x86_64-*-debug.zip inputs/${DISTNAME}-win64-debug.zip
-  mv ${OUTDIR}/${DISTNAME}-i686-*-debug.zip inputs/${DISTNAME}-win32-debug.zip
-  mv ${OUTDIR}/${DISTNAME}-x86_64-*.zip inputs/${DISTNAME}-win64.zip
-  mv ${OUTDIR}/${DISTNAME}-i686-*.zip inputs/${DISTNAME}-win32.zip
+  mv ${OUTDIR}/${DISTNAME}-x86_64-*-debug.zip /gitian-builder/inputs/${DISTNAME}-win64-debug.zip
+  mv ${OUTDIR}/${DISTNAME}-i686-*-debug.zip /gitian-builder/inputs/${DISTNAME}-win32-debug.zip
+  mv ${OUTDIR}/${DISTNAME}-x86_64-*.zip /gitian-builder/inputs/${DISTNAME}-win64.zip
+  mv ${OUTDIR}/${DISTNAME}-i686-*.zip /gitian-builder/inputs/${DISTNAME}-win32.zip
